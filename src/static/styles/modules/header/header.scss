@@ -1,0 +1,15 @@
+.header {
+  background-color: $gray-background;
+  &__nav {
+    &.header__nav {
+      &--right {
+        margin-left: auto;
+      }
+    }
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+  }
+}

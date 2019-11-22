@@ -13,24 +13,24 @@ code {
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans-Regular';
   src: local('OpenSans-Regular'), url("./fonts/OpenSans-Regular.ttf") format('truetype');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans-Light';
   src: local('OpenSans-Light'), url("./fonts/OpenSans-Light.ttf") format('truetype');
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans-Bold';
   src: local('OpenSans-Bold'), url("./fonts/OpenSans-Bold.ttf") format('truetype');
-  font-weight: ;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: local('OpenSans-Semibold'), url("./fonts/OpenSans-Semibold.ttf") format('truetype');
+  font-family: 'OpenSans-SemiBold';
+  src: local('OpenSans-SemiBold'), url("./fonts/OpenSans-SemiBold.ttf") format('truetype');
+  font-weight: 600;
 }
