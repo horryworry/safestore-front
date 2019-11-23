@@ -1,5 +1,4 @@
 .header {
-  background-color: $gray-background;
   &__nav {
     &.header__nav {
       &--right {
@@ -8,8 +7,112 @@
     }
   }
   &__top {
-    align-items: center;
-    display: flex;
+    background-color: $gray-background;
     padding: 10px 0;
   }
+  &__content {
+    align-items: center;
+    display: flex;
+  }
+  &__main {
+    padding: 25px 0;
+  }
+  &__phone {
+    color: $navigation-text;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  &__phones {
+    display: flex;
+    margin-right: 90px;
+    & > * {
+      margin-right: 30px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+  &-address {
+    display: flex;
+    flex: 0 0 190px;
+    width: 190px;
+    &__icon {
+      flex: 0 0 15px;
+      fill: $silver-text;
+      height: 21px;
+      width: 20px;
+    }
+    &__text {
+      color: $navigation-text;
+      font-size: 12px;
+      line-height: 1.67;
+    }
+    & > * {
+      margin-right: 15px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+  &__shop {
+    display: flex;
+    flex: 0 0 270px;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 270px;
+    & > * {
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+  &-goods {
+    &__price {
+      color: $navigation-text;
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    &__count {
+      color: $silver-text;
+      display: block;
+      font-size: 12px;
+      line-height: 1.67;
+    }
+  }
+  &-basket {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+    background-color: $basket-background;
+    & > * {
+      margin-right: 15px;
+      &:last-child { margin-right: 0; }
+    }
+    &__icon {
+      width: 20px;
+      height: 21px;
+    }
+    &__text {
+      color: $navigation-text;
+      font-weight: 600;
+    }
+  }
+  &__logo {
+    margin-right: 40px;
+  }
+  &__link {
+    color: $silver-text;
+    display: block;
+    font-size: 12px;
+    line-height: 1.67;
+    text-decoration: underline;
+  }
+  &__description {
+    color: $silver-text;
+    display: block;
+    font-size: 12px;
+    line-height: 1.67;
+  }
 }
+
