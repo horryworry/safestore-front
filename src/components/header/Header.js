@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../static/styles/styles.scss';
 import HeaderTop from './HeaderTop';
 import HeaderMain from "./HeaderMain";
+import HeaderMenu from "./HeaderMenu";
 
 class Header extends Component {
 
@@ -11,6 +12,7 @@ class Header extends Component {
                 <header className="header">
                     <HeaderTop/>
                     <HeaderMain/>
+                    <HeaderMenu/>
                 </header>
             </div>
         );

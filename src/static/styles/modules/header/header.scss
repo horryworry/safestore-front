@@ -1,4 +1,5 @@
 .header {
+  border-bottom: 1px solid $gray-background;
   &__nav {
     &.header__nav {
       &--right {
@@ -83,6 +84,7 @@
     border-radius: 20px;
     align-items: center;
     height: 40px;
+    cursor: pointer;
     padding: 0 20px;
     background-color: $basket-background;
     & > * {
@@ -114,5 +116,8 @@
     font-size: 12px;
     line-height: 1.67;
   }
-}
+  &__search {
+    margin-left: auto;
 
+  }
+}
