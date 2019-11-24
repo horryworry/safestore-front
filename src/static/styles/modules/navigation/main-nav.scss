@@ -7,19 +7,16 @@
 
   &__item {
     margin-right: 40px;
-
     &:last-child {
       margin-right: 0;
     }
-
     &:hover {
       .main-nav {
         &__link {
           border-bottom-color: $orange;
         }
-
-        &-dropdown {
-          display: flex;
+        &__dropdown-wrapper {
+          display: block;
         }
       }
     }
@@ -40,11 +37,15 @@
     background-color: $white;
     padding-top: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-    display: none;
     left: 0;
-    position: absolute;
-    top: 100%;
+    display: flex;
     width: 720px;
+    &-wrapper {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+    }
   }
 
   &__col {
@@ -52,29 +53,44 @@
   }
 
 }
+
 .main-subnav {
+
   &__list {
+    position: relative;
     .main-subnav__list {
+      width: 360px;
       display: none;
+      left: 100%;
+      position: absolute;
+      top: 0;
     }
   }
-  &__item {
 
+  &__item {
+    &:hover {
+      & > .main-subnav__link {
+        background-color: $gray-background;
+        color: $orange;
+      }
+      .main-subnav__icon {
+        fill: $orange;
+      }
+      .main-subnav__list {
+        display: block;
+      }
+    }
   }
+
   &__link {
     align-items: center;
     color: $mine-shaft;
     display: flex;
     padding: 10px;
     line-height: 20px;
-    &:hover {
-      background-color: $gray-background;
-      color: $orange;
-      .main-nav-dropdown__icon {
-        fill: $orange;
-      }
-    }
+
   }
+
   &__icon {
     fill: $silver;
     margin-left: auto;
