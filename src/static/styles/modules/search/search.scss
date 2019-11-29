@@ -1,7 +1,72 @@
 .search {
+  position: relative;
+  &.search--open {
+    .search__body {
+      display: block;
+    }
+  }
   &__icon {
     cursor: pointer;
     height: 20px;
     width: 20px;
+    fill: $orange;
   }
+  &__body {
+    background-color: $white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.21), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -35px;
+  }
+  &__form {
+    align-items: center;
+    display: flex;
+  }
+  &__input {
+    background-color: transparent;
+    color: $navigation-text;
+    padding: 0 50px 0 20px;
+    border: 1px solid $alto;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    line-height: 48px;
+    height: 50px;
+    &::placeholder {
+      color: $placeholder-color;
+    }
+    &-wrapper {
+      position: relative;
+    }
+  }
+  &__clear {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    &-icon {
+      height: 16px;
+      width: 16px;
+      fill: rgba(75, 75, 75, 0.5);
+    }
+  }
+
+  &__btn {
+    background-color: $orange;
+    border: 0;
+    color: $white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 700;
+    height: 50px;
+    padding: 0 15px;
+  }
+
 }
