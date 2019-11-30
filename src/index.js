@@ -8,6 +8,7 @@ import './fonts/OpenSans-Bold.ttf'
 import './fonts/OpenSans-Light.ttf'
 import './fonts/OpenSans-SemiBold.ttf'
 import './fonts/OpenSans-Regular.ttf'
+import './fonts/VAG Rounded LT Bold.ttf'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

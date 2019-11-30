@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.scss';
 import Header from "./components/header/Header";
+import Banner from "./components/index/Banner";
+import Advantages from "./components/index/Advantages";
+import Hits from "./components/index/Hits";
 
 function App() {
   return (
-
-    <Header />
-
+    <Fragment>
+      <Header />
+      <Banner />
+      <Advantages/>
+      <Hits/>
+    </Fragment>
   );
 }
 
