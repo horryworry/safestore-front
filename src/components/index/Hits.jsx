@@ -1,45 +1,32 @@
 import React, { Component } from 'react';
+import Tabs from "./Tabs/Tabs";
+import Benefits from "./Tabs/Benefits";
+import New from "./Tabs/New";
+import Hit from "./Tabs/Hits";
 
 class Hits extends Component {
+
     render() {
         return(
-            <section className="s-hits">
-                <div className="container">
-                    <h2 className="title-section">
-                        Хиты продаж
-                    </h2>
-                    <div className="hits tabs">
-                        <ul className="tabs-navigation hits-navigation">
-                            <li className="hits-navigation__item tabs-navigation__item tabs-navigation__item--active">
-                                Хиты продаж
-                            </li>
-                            <li className="hits-navigation__item tabs-navigation__item">
-                                Выгодно
-                            </li>
-                            <li className="hits-navigation__item tabs-navigation__item">
-                                Новинки
-                            </li>
-                        </ul>
-                        <div className="tabs__body">
-                            <div className="tab tab--active">
-                                <p>
-                                    1
-                                </p>
-                            </div>
-                            <div className="tab">
-                                <p>
-                                    1
-                                </p>
-                            </div>
-                            <div className="tab">
-                                <p>
-                                    1
-                                </p>
-                            </div>
-                        </div>
+
+            <Tabs>
+                <div label="Хиты продаж">
+                    <div className="tab tab-hits">
+                        <Hit/>
                     </div>
                 </div>
-            </section>
+                <div label="Выгодно">
+                    <div className="tab tab-benefits">
+                        <Benefits/>
+                    </div>
+                </div>
+                <div label="Новинки">
+                    <div className="tab tab-new">
+                        <New/>
+                    </div>
+                </div>
+            </Tabs>
+
         );
     }
 }

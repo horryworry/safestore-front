@@ -4,6 +4,8 @@ import Header from "./components/header/Header";
 import Banner from "./components/index/Banner";
 import Advantages from "./components/index/Advantages";
 import Hits from "./components/index/Hits";
+import Information from "./components/index/Information";
+import About from "./components/index/About";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Banner />
       <Advantages/>
       <Hits/>
+      <Information/>
+      <About/>
     </Fragment>
   );
 }
