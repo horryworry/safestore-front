@@ -1,8 +1,11 @@
 .products-line-slider {
   &__navigation {
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    display: none;
+    @media screen and (max-width: $tablet-size){
+      display: flex;
+    }
   }
   &__btn {
     width: 40px;
@@ -12,10 +15,29 @@
     justify-content: center;
     border: 1px solid $alto;
     border-radius: 2px;
+    z-index: 5;
   }
   &__icon {
     width: 15px;
     height: 15px;
     fill: $orange;
   }
+
+  &__dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: $alto;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    z-index: 2;
+  }
+
+  .slick-active {
+    .products-line-slider__dot {
+      background-color: $orange;
+    }
+  }
+
 }

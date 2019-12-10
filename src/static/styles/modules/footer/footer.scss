@@ -8,6 +8,9 @@ footer { flex: 0 0 auto; }
     .container {
       align-items: flex-start;
       display: flex;
+      @media screen and (max-width: $tablet-size){
+        flex-wrap: wrap;
+      }
     }
   }
   &__item {
@@ -15,6 +18,11 @@ footer { flex: 0 0 auto; }
     flex-direction: column;
     margin-right: 130px;
     max-width: 215px;
+    @media screen and (max-width: $tablet-size){
+      flex: 0 0 226px;
+      width: 226px;
+      margin-right: 0;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -26,6 +34,11 @@ footer { flex: 0 0 auto; }
   }
   &__socials {
     padding-bottom: 30px;
+    .yandex-market {
+      @media screen and (max-width: $tablet-size){
+        display: none;
+      }
+    }
   }
 
   &__bottom {
@@ -63,10 +76,26 @@ footer { flex: 0 0 auto; }
   &__contacts {
     margin-left: auto;
     text-align: right;
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
+    &-mobile {
+      display: none;
+      @media screen and (max-width: $tablet-size){
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
   &__navigation {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 30px;
+    @media screen and (max-width: $tablet-size) {
+      justify-content: space-between;
+      flex: 1;
+      width: 100%;
+    }
   }
   &__phone {
     color: $mine-shaft;

@@ -70,6 +70,32 @@ class Footer extends Component {
                                 horryworry@gmail.com
                             </a>
                         </div>
+                        <div className="footer__contacts-mobile">
+                            <div className="footer__item">
+                                <a href="tel:+996700391252" className="footer__phone">
+                                    +996 (700) 39-12-52
+                                </a>
+                                <span className="footer__text">
+                                    Звонок бесплатный
+                                </span>
+                            </div>
+                            <div className="footer__item">
+                                <span className="footer__text">
+                                    + 996 (700) 39-12-52
+                                </span>
+                                <a href="mailto:horryworry@gmail.com" className="footer__mail">
+                                    horryworry@gmail.com
+                                </a>
+                            </div>
+                            <div className="footer__item">
+                                <div className="yandex-market">
+                                    <img src={yandex} alt="иконка Яндекс" className="yandex-market__icon"/>
+                                    <a href="" className="btn btn--small btn--transparent-gray btn--inline">
+                                        Оставить
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="footer__socials">

@@ -70,7 +70,7 @@ class Banner extends Component {
                             </div>
                         </div>
 
-                        <div className="information__item">
+                        <div className="information-item">
 
                             <div className="information-item__header">
                                 <h2 className="title-section">
@@ -101,7 +101,7 @@ class Banner extends Component {
 
                         </div>
 
-                        <div className="information__item">
+                        <div className="information-item information-item--wide">
 
                             <div className="information-item__header">
                                 <h2 className="title-section">

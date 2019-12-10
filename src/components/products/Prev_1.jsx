@@ -33,14 +33,21 @@ class Prev_1 extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
+            swipe: false
         };
         return(
             <div className="product-prev">
                 <div className="product-prev__header">
                     <Slider ref={c => (this.slider = c)} {...settings} class="js-product-prev__slider">
-                        <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
-                        <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
-                        <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
+                        <div className="product-prev__img-wrapper">
+                            <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
+                        </div>
+                        <div className="product-prev__img-wrapper">
+                            <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
+                        </div>
+                        <div className="product-prev__img-wrapper">
+                            <img src={macbook} alt="Изображение товара" className="product-prev__img"/>
+                        </div>
                     </Slider>
                 </div>
                 <div className="product-prev__body">

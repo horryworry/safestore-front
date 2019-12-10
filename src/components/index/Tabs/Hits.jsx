@@ -6,6 +6,21 @@ import arrowPrev from "../../../static/images/general/arrow-left.png";
 import arrowNext from "../../../static/images/general/arrowright.png";
 
 class Hits extends Component {
+
+    constructor(props) {
+        super(props);
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+    }
+
+    next() {
+        this.slider.slickNext();
+    }
+
+    previous() {
+        this.slider.slickPrev();
+    }
+
     render() {
         const settings = {
             customPaging : function(slider, i) {
@@ -26,27 +41,11 @@ class Hits extends Component {
                         slidesToShow: 3,
                         slidesToScroll: 1,
                         dots: true,
-                        appendDots: '.products-line-slider__dots',
                         customPaging : function(i) {
                             return(
                                 <div className="products-line-slider__dot"></div>
                             );
                         },
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
                     }
                 }
             ]
@@ -60,14 +59,10 @@ class Hits extends Component {
                     <Prev_2/>
                 </Slider>
                 <div className="products-line-slider__navigation">
-                    <div className="products-line-slider__btn products-line-slider__btn--prev">
+                    <div className="products-line-slider__btn products-line-slider__btn--prev" onClick={this.previous}>
                         <img src={arrowPrev} alt="" className="products-line-slider__icon"/>
-
                     </div>
-                    <div className="products-line-slider__dots">
-
-                    </div>
-                    <div className="products-line-slider__btn products-line-slider__btn--next">
+                    <div className="products-line-slider__btn products-line-slider__btn--next" onClick={this.next}>
                         <img src={arrowNext} alt="" className="products-line-slider__icon"/>
                     </div>
                 </div>
