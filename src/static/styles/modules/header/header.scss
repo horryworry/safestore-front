@@ -1,5 +1,10 @@
+@import "mobile";
+
 .header {
   border-bottom: 1px solid $gray-background;
+  @media screen and (max-width: $tablet-size){
+    border-bottom: 0;
+  }
   &__nav {
     &.header__nav {
       &--right {
@@ -10,6 +15,14 @@
   &__top {
     background-color: $gray-background;
     padding: 10px 0;
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
+  }
+  &__menu {
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
   }
   &__content {
     align-items: center;
@@ -25,18 +38,26 @@
     font-weight: 600;
     white-space: nowrap;
   }
-  &__phones {
-    display: flex;
-    margin-right: 90px;
-    & > * {
-      margin-right: 30px;
-      &:last-child { margin-right: 0; }
+  &__item {
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
+    &.header__item {
+      &--mobile {
+        @media screen and (max-width: $tablet-size){
+          display: block;
+        }
+      }
     }
   }
+
   &-address {
     display: flex;
     flex: 0 0 190px;
     width: 190px;
+    @media screen and (max-width: $tablet-size){
+      display: none;
+    }
     &__icon {
       flex: 0 0 15px;
       fill: $silver-text;
@@ -53,6 +74,16 @@
       &:last-child { margin-right: 0; }
     }
   }
+
+  &__phones {
+    display: flex;
+    margin-right: 90px;
+    & > * {
+      margin-right: 30px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+
   &__shop {
     display: flex;
     flex: 0 0 270px;

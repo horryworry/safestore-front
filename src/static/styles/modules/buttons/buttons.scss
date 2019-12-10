@@ -10,6 +10,13 @@
   padding: 0 20px;
   text-align: center;
   transition: all linear .3s;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  &:hover {
+    background-color: $orange;
+    color: $white;
+  }
   &.btn {
     &--transparent {
       &-white {
@@ -21,12 +28,28 @@
           color: $navigation-text;
         }
       }
+      &-gray {
+        border-color: rgba(38, 38, 38, 0.15);
+        background-color: transparent;
+        color: $gray-text;
+        &:hover {
+          background-color: rgba(38, 38, 38, 0.15);
+          color: $white;
+        }
+      }
     }
     &--round {
       border-radius: 20px;
     }
     &--inline {
       display: inline-block;
+      width: auto;
     }
+  }
+
+  &--small {
+    height: 30px;
+    line-height: 28px;
+    padding: 0 15px;
   }
 }

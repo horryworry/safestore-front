@@ -13,7 +13,7 @@ class HeaderMain extends Component {
                             <img src={logo} alt="Логотип" className="logo__img"/>
                         </div>
                         <div className="header__phones">
-                            <div className="header__item">
+                            <div className="header__item header__item--mobile">
                                 <a href="tel:+996700391252" className="header__phone">+996 (700) 39-12-52</a>
                                 <a href="" className="header__link">Заказать звонок</a>
                             </div>

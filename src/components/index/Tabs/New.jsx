@@ -8,7 +8,7 @@ class New extends Component {
         const settings = {
             customPaging : function(slider, i) {
                 return(
-                    <a class=""></a>
+                    <div class=""></div>
                 );
             },
             dots: true,

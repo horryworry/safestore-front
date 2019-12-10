@@ -26,7 +26,7 @@ class Banner extends Component {
         const settings = {
             customPaging : function(i) {
                 return(
-                    <a class="banner__dot"></a>
+                    <div class="banner__dot"></div>
                 );
             },
             dots: true,

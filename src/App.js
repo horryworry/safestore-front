@@ -6,6 +6,7 @@ import Advantages from "./components/index/Advantages";
 import Hits from "./components/index/Hits";
 import Information from "./components/index/Information";
 import About from "./components/index/About";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hits/>
       <Information/>
       <About/>
+      <Footer/>
     </Fragment>
   );
 }

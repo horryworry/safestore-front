@@ -21,8 +21,7 @@ class Prev_2 extends Component {
         const settings = {
             customPaging : function(i) {
                 return(
-                    <div className="product-prev__color-container">
-                        <a className="product-prev__color" style={{backgroundColor: colors[i]}}></a>
+                    <div className="product-prev__color-container product-prev__color" style={{backgroundColor: colors[i]}}>
                     </div>
 
                 );

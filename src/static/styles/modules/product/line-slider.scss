@@ -1,0 +1,21 @@
+.products-line-slider {
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $alto;
+    border-radius: 2px;
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $orange;
+  }
+}
