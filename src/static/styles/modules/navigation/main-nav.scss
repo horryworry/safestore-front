@@ -1,11 +1,9 @@
 .main-nav {
-
   &__list {
     align-items: center;
     display: flex;
     position: relative;
   }
-
   &__item {
     margin-right: 40px;
     &:last-child {
@@ -22,7 +20,6 @@
       }
     }
   }
-
   &__link {
     align-items: center;
     border-bottom: 2px solid transparent;
@@ -34,14 +31,12 @@
     padding: 15px 0;
     font-family: OpenSans-Bold;
   }
-
   &__dropdown {
     background-color: $white;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
     padding-top: 10px;
     display: inline-flex;
     left: 0;
-    padding-top: 10px;
     &-wrapper {
       display: none;
       left: 0;
@@ -51,56 +46,10 @@
       z-index: 5;
     }
   }
-
   &__icon {
     height: 12px;
     width: 12px;
     fill: $navigation-text;
     margin-left: 10px;
   }
-
 }
-
-.main-subnav {
-  &__list {
-    position: relative;
-    .main-subnav__list {
-      display: none;
-      left: 360px;
-      position: absolute;
-      top: 0;
-    }
-  }
-  &__item {
-    width: 360px;
-    &:hover {
-      & > .main-subnav__link {
-        background-color: $gray-background;
-        color: $orange;
-      }
-      .main-subnav__icon {
-        fill: $orange;
-      }
-      .main-subnav__list {
-        display: block;
-      }
-    }
-  }
-
-  &__link {
-    align-items: center;
-    color: $mine-shaft;
-    display: flex;
-    padding: 10px;
-    line-height: 20px;
-
-  }
-
-  &__icon {
-    fill: $silver;
-    margin-left: auto;
-    height: 12px;
-    width: 8px;
-  }
-}
-

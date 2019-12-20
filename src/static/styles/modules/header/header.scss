@@ -30,6 +30,9 @@
   }
   &__main {
     padding: 25px 0;
+    @media screen and (max-width: $phone-size){
+      display: none;
+    }
   }
   &__phone {
     color: $navigation-text;
@@ -50,7 +53,6 @@
       }
     }
   }
-
   &-address {
     display: flex;
     flex: 0 0 190px;
@@ -74,7 +76,6 @@
       &:last-child { margin-right: 0; }
     }
   }
-
   &__phones {
     display: flex;
     margin-right: 90px;
@@ -83,7 +84,6 @@
       &:last-child { margin-right: 0; }
     }
   }
-
   &__shop {
     display: flex;
     flex: 0 0 270px;

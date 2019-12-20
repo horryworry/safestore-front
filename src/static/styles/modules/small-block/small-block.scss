@@ -5,6 +5,15 @@
   }
 }
 
+.mobile {
+  &__logo {
+    display: none;
+    @media screen and (max-width: $phone-size){
+      display: block;
+    }
+  }
+}
+
 .advantages {
   align-items: center;
   display: flex;
@@ -14,6 +23,12 @@
   @media screen and (max-width: $tablet-size) {
     justify-content: space-between;
     padding: 20px 40px;
+  }
+  @media screen and (max-width: $phone-size) {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
   }
 }
 
@@ -26,8 +41,16 @@
     text-align: center;
     margin-right: 0;
   }
+  @media screen and (max-width: $phone-size) {
+    flex-direction: row;
+    text-align: left;
+    margin-bottom: 10px;
+  }
   &:last-child {
     margin-right: 0;
+    @media screen and (max-width: $phone-size) {
+      margin-bottom: 0;
+    }
   }
   &__body {
     display: flex;
@@ -46,6 +69,10 @@
     @media screen and (max-width: $tablet-size) {
       margin-right: 0px;
       margin-bottom: 10px;
+    }
+    @media screen and (max-width: $phone-size) {
+      margin-right: 20px;
+      margin-bottom: 0;
     }
   }
   &__descr {
@@ -100,6 +127,9 @@
       flex: 1;
       width: 100%;
     }
+    @media screen and (max-width: $phone-size) {
+      overflow: auto;
+    }
     &__item {
       margin-bottom: 30px;
       height: 50px;
@@ -129,21 +159,6 @@
   height: 16px;
   position: relative;
   width: 20px;
-  &--active {
-    .sandwich__line {
-      &--top {
-        top: 7px;
-        transform: rotate(45deg);
-      }
-      &--midle {
-        opacity: 0;
-      }
-      &--bottom {
-        top: 7px;
-        transform: rotate(-45deg);
-      }
-    }
-  }
   &__line {
     background-color: $white;
     display: block;

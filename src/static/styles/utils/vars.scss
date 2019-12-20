@@ -17,9 +17,6 @@ $advantages-background: #f6f8f9;
 $news-title:            #939495;
 $counter-color:         #8eb359;
 
-// Sizes
-$base-font-size: 14px;
-
 $breakpoints: (
         "phone"       : 400px,
         "phone-wide"  : 480px,
@@ -31,7 +28,11 @@ $breakpoints: (
         "desktop-wide": 1440px
 );
 
+// Sizes
+$base-font-size: 14px;
 $content-size:  1140px;
 $tablet-size:   1139px;
+$phone-size:   767px;
+$phone-size-small:   400px;
 
 // Fonts

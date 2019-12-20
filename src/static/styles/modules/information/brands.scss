@@ -11,6 +11,11 @@
   }
 
   &.brands__list--small {
+    @media screen and (max-width: $tablet-size){
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin-right: -15px;
+    }
     & > * {
       margin-right: 10px;
       margin-bottom: 10px;
@@ -20,7 +25,6 @@
           margin-right: 10px;
         }
       }
-
     }
   }
 

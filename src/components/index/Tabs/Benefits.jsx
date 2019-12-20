@@ -23,29 +23,34 @@ class Benefits extends Component {
 
     render() {
         const settings = {
-            customPaging : function(slider, i) {
-                return(
-                    <div class=""></div>
-                );
-            },
             dots: true,
             infinite: false,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
             arrows: false,
+            customPaging : function(i) {
+                return(
+                    <div className="products-line-slider__dot"></div>
+                );
+            },
             responsive: [
                 {
                     breakpoint: 1139,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1,
-                        dots: true,
-                        customPaging : function(i) {
-                            return(
-                                <div className="products-line-slider__dot"></div>
-                            );
-                        },
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1,
                     }
                 }
             ]

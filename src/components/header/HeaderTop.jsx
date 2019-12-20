@@ -15,7 +15,7 @@ class HeaderTop extends Component {
             <div className="header__top">
                 <div className="container">
                     <div className="header__content">
-                        <nav className="header__nav header-nav">
+                        <nav className="header__nav inform-nav">
                             <ul className="header-nav__list">
                                 {headerNavLink("", "О компании")}
                                 {headerNavLink("", "Доставка и оплата")}
@@ -26,7 +26,7 @@ class HeaderTop extends Component {
                                 {headerNavLink("", "Контакты")}
                             </ul>
                         </nav>
-                        <nav className="header__nav header__nav--right header-nav">
+                        <nav className="header__nav header__nav--right inform-nav">
                             <ul className="header-nav__list">
                                 {headerNavLink("", "Регистрация")}
                                 {headerNavLink("", "Вход")}

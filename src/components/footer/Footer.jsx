@@ -43,7 +43,7 @@ class Footer extends Component {
                                     {this.footerNavLink('', 'Отзывы')}
                                 </ul>
                             </div>
-                            <div className="footer__item">
+                            <div className="footer__item footer__item--full">
                                 <ul className="footer-nav">
                                     {this.footerNavLink('', 'Контакты')}
                                     {this.footerNavLink('', 'Вопросы и ответы')}
@@ -79,7 +79,7 @@ class Footer extends Component {
                                     Звонок бесплатный
                                 </span>
                             </div>
-                            <div className="footer__item">
+                            <div className="footer__item footer__item--text-right">
                                 <span className="footer__text">
                                     + 996 (700) 39-12-52
                                 </span>
@@ -87,7 +87,7 @@ class Footer extends Component {
                                     horryworry@gmail.com
                                 </a>
                             </div>
-                            <div className="footer__item">
+                            <div className="footer__item  footer__item--full">
                                 <div className="yandex-market">
                                     <img src={yandex} alt="иконка Яндекс" className="yandex-market__icon"/>
                                     <a href="" className="btn btn--small btn--transparent-gray btn--inline">
