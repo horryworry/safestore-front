@@ -32,13 +32,13 @@ class HeaderMenu extends Component {
                     <div className="header__content">
                         <MainNav/>
                         <div className={`header__search search ${isSearchVisible ? "search--open" : ""}`}>
-                            <img src={search} className="search__icon" onClick={this.toggleSearch}/>
+                            <img src={search} alt={""} className="search__icon" onClick={this.toggleSearch}/>
                             <div className="search__body">
                                 <form className="search__form">
                                     <div className="search__input-wrapper">
                                         <input placeholder="Я хочу купить..." className="search__input" value={this.state.title} onChange={this.clearSearchForm.bind(this)}/>
                                         <div className="search__clear">
-                                            <img src={clear} className="search__clear-icon" onClick={this.clearForm}/>
+                                            <img src={clear} alt={""} className="search__clear-icon" onClick={this.clearForm}/>
                                         </div>
                                     </div>
                                     <input type="submit" value="Найти" className="search__btn"/>

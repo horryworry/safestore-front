@@ -9,12 +9,32 @@ import search from "../../static/images/general/search.png";
 
 class HeaderMobile extends Component {
 
-    state = {
-        isMenuVisible: false
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0,
+            height: 0,
+            isMenuVisible: false
+        };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
 
     toggleMenu = () => {
         this.setState(prevState => ({ isMenuVisible: !prevState.isMenuVisible }));
+        // this.state = { isMenuVisible: !this.state.isMenuVisible }
     };
 
     mainSubnavLink = (link, text) => {
@@ -101,7 +121,7 @@ class HeaderMobile extends Component {
                                     <a href="tel:+996700391252" className="mobile-menu__phone-number">
                                         +996 (700) 39-12-52
                                     </a>
-                                    <a href="" className="mobile-menu__phone-link">
+                                    <a href="/#" className="mobile-menu__phone-link">
                                         Заказать звонок
                                     </a>
                                 </div>
@@ -124,7 +144,7 @@ class HeaderMobile extends Component {
                             <div className="search__input-wrapper">
                                 <input placeholder="Я хочу купить..." className="search__input"/>
                                 <div className="search__clear">
-                                    <img src={clear} className="search__clear-icon"/>
+                                    <img src={clear} alt={""} className="search__clear-icon"/>
                                 </div>
                             </div>
                             <input type="submit" value="Найти" className="search__btn"/>
@@ -134,17 +154,17 @@ class HeaderMobile extends Component {
                         <ul className="mobile-user-nav__list">
                             <li className="mobile-user-nav__item">
                                 <a href="mobile-user-nav__link">
-                                    <img src={search} className="mobile-user-nav__icon"/>
+                                    <img src={search} alt={""} className="mobile-user-nav__icon"/>
                                 </a>
                             </li>
                             <li className="mobile-user-nav__item">
                                 <a href="mobile-user-nav__link">
-                                    <img src={user} className="mobile-user-nav__icon"/>
+                                    <img src={user} alt={""} className="mobile-user-nav__icon"/>
                                 </a>
                             </li>
                             <li className="mobile-user-nav__item">
                                 <a href="mobile-user-nav__link">
-                                    <img src={basket} className="mobile-user-nav__icon"/>
+                                    <img src={basket} alt={""} className="mobile-user-nav__icon"/>
                                 </a>
                             </li>
                         </ul>

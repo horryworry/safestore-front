@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Prev_1 from "../../products/Prev_1";
-import Prev_2 from "../../products/Prev_2";
+import Prev1 from "../../products/Prev_1";
+import Prev2 from "../../products/Prev_2";
 import Slider from "react-slick";
 import arrowPrev from "../../../static/images/general/arrow-left.png";
 import arrowNext from "../../../static/images/general/arrowright.png";
@@ -58,10 +58,10 @@ class New extends Component {
         return(
             <div className="products-line-slider">
                 <Slider ref={c => (this.slider = c)} {...settings} class="js-products-line-slider">
-                    <Prev_1/>
-                    <Prev_2/>
-                    <Prev_1/>
-                    <Prev_2/>
+                    <Prev1/>
+                    <Prev2/>
+                    <Prev1/>
+                    <Prev2/>
                 </Slider>
                 <div className="products-line-slider__navigation">
                     <div className="products-line-slider__btn products-line-slider__btn--prev" onClick={this.previous}>

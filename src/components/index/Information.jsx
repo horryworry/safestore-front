@@ -9,9 +9,9 @@ class Banner extends Component {
         let table = [];
         for (let i = 0; i < 4; i++) {
             table.push(
-                <li className="brands__item">
-                    <a href="" className="brand">
-                        <img src={apple} className="brand__img"></img>
+                <li className="brands__item" key={i}>
+                    <a href="/#" className="brand">
+                        <img src={apple} alt={""} className="brand__img"></img>
                         <span className="brand__name">
                             Apple
                         </span>
@@ -35,7 +35,7 @@ class Banner extends Component {
                             </div>
                             <div className="information-item__body">
                                 <div className="news-prev__wrapper">
-                                    <a href="" className="news-prev">
+                                    <a href="/#" className="news-prev">
                                         <div className="news-prev__img" style={{backgroundImage: `url(${sale1})`}}>
 
                                         </div>
@@ -48,7 +48,7 @@ class Banner extends Component {
                                             </span>
                                         </div>
                                     </a>
-                                    <a href="" className="news-prev">
+                                    <a href="/#" className="news-prev">
                                         <div className="news-prev__img" style={{backgroundImage: `url(${sale2})`}}>
 
                                         </div>
@@ -64,7 +64,7 @@ class Banner extends Component {
                                 </div>
                             </div>
                             <div className="information-item__footer">
-                                <a href="" className="information-item__link">
+                                <a href="/#" className="information-item__link">
                                     Все новости
                                 </a>
                             </div>
@@ -94,7 +94,7 @@ class Banner extends Component {
                             </div>
 
                             <div className="information-item__footer">
-                                <a href="" className="information-item__link">
+                                <a href="/#" className="information-item__link">
                                     Все отзывы
                                 </a>
                             </div>
@@ -118,7 +118,7 @@ class Banner extends Component {
                             </div>
 
                             <div className="information-item__footer">
-                                <a href="" className="information-item__link">
+                                <a href="/#" className="information-item__link">
                                     Все бренды
                                 </a>
                                 <span className="information-item__count">

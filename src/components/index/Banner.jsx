@@ -26,7 +26,7 @@ class Banner extends Component {
         const settings = {
             customPaging : function(i) {
                 return(
-                    <div class="banner__dot"></div>
+                    <div className="banner__dot"></div>
                 );
             },
             dots: true,
@@ -41,10 +41,10 @@ class Banner extends Component {
                 <div className="container">
                     <div className="banner">
                         <div className="banner__navigation banner__navigation--prev" onClick={this.previous}>
-                            <img src={left} className="banner__navigation-icon"/>
+                            <img src={left} alt={""} className="banner__navigation-icon"/>
                         </div>
                         <div className="banner__navigation banner__navigation--next" onClick={this.next}>
-                            <img src={right} className="banner__navigation-icon"/>
+                            <img src={right} alt={""} className="banner__navigation-icon"/>
                         </div>
                         <Slider ref={c => (this.slider = c)} {...settings} class="js-banner">
 
@@ -60,7 +60,7 @@ class Banner extends Component {
                                         <span className="banner__descr">
                                         Подарок который оценит каждый
                                     </span>
-                                        <a href="" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
+                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ class Banner extends Component {
                                         <span className="banner__descr">
                                         Подарок который оценит каждый
                                     </span>
-                                        <a href="" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
+                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ class Banner extends Component {
                                         <span className="banner__descr">
                                         Подарок который оценит каждый
                                     </span>
-                                        <a href="" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
+                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ class Banner extends Component {
                                         <span className="banner__descr">
                                         Подарок который оценит каждый
                                     </span>
-                                        <a href="" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
+                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
                                     </div>
                                 </div>
                             </div>

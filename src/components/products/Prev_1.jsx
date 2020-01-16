@@ -22,7 +22,7 @@ class Prev_1 extends Component {
             customPaging : function(i) {
                 return(
                     <div className="product-prev__color-container">
-                        <a className="product-prev__color" style={{backgroundColor: colors[i]}}></a>
+                        <a href={"/#"} className="product-prev__color" style={{backgroundColor: colors[i]}}></a>
                     </div>
 
                 );

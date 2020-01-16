@@ -10,7 +10,7 @@ class Advantages extends Component {
                 <div className="container">
                     <div className="advantages">
                         <div className="advantage">
-                            <img src={guarantee} className="advantage__icon"/>
+                            <img src={guarantee} alt={""} className="advantage__icon"/>
                             <div className="advantage__body">
                                 <span className="advantage__title">
                                     Гарантия
@@ -21,7 +21,7 @@ class Advantages extends Component {
                             </div>
                         </div>
                         <div className="advantage">
-                            <img src={delivery} className="advantage__icon"/>
+                            <img src={delivery} alt={""} className="advantage__icon"/>
                             <div className="advantage__body">
                                 <span className="advantage__title">
                                     Доставка
@@ -32,7 +32,7 @@ class Advantages extends Component {
                             </div>
                         </div>
                         <div className="advantage">
-                            <img src={pay} className="advantage__icon"/>
+                            <img src={pay} alt={""} className="advantage__icon"/>
                             <div className="advantage__body">
                                 <span className="advantage__title">
                                     Оплата

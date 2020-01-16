@@ -25,29 +25,29 @@ class Footer extends Component {
                         <div className="footer__navigation">
                             <div className="footer__item">
                                 <ul className="footer-nav">
-                                    {this.footerNavLink('', 'iPhone')}
-                                    {this.footerNavLink('', 'Macbook')}
-                                    {this.footerNavLink('', 'Macbook Mini')}
-                                    {this.footerNavLink('', 'Apple Watch')}
-                                    {this.footerNavLink('', 'iPad')}
-                                    {this.footerNavLink('', 'Apple TV')}
+                                    {this.footerNavLink('/#', 'iPhone')}
+                                    {this.footerNavLink('/#', 'Macbook')}
+                                    {this.footerNavLink('/#', 'Macbook Mini')}
+                                    {this.footerNavLink('/#', 'Apple Watch')}
+                                    {this.footerNavLink('/#', 'iPad')}
+                                    {this.footerNavLink('/#', 'Apple TV')}
                                 </ul>
                             </div>
                             <div className="footer__item">
                                 <ul className="footer-nav">
-                                    {this.footerNavLink('', 'О компании')}
-                                    {this.footerNavLink('', 'Доставка')}
-                                    {this.footerNavLink('', 'Оплата')}
-                                    {this.footerNavLink('', 'Поставщикам')}
-                                    {this.footerNavLink('', 'Новости')}
-                                    {this.footerNavLink('', 'Отзывы')}
+                                    {this.footerNavLink('/#', 'О компании')}
+                                    {this.footerNavLink('/#', 'Доставка')}
+                                    {this.footerNavLink('/#', 'Оплата')}
+                                    {this.footerNavLink('/#', 'Поставщикам')}
+                                    {this.footerNavLink('/#', 'Новости')}
+                                    {this.footerNavLink('/#', 'Отзывы')}
                                 </ul>
                             </div>
                             <div className="footer__item footer__item--full">
                                 <ul className="footer-nav">
-                                    {this.footerNavLink('', 'Контакты')}
-                                    {this.footerNavLink('', 'Вопросы и ответы')}
-                                    {this.footerNavLink('', 'Карта сайта')}
+                                    {this.footerNavLink('/#', 'Контакты')}
+                                    {this.footerNavLink('/#', 'Вопросы и ответы')}
+                                    {this.footerNavLink('/#', 'Карта сайта')}
                                 </ul>
                                 <span className="footer_address">
                                 Киргизия, г. Бишкек, ул. Советская 61-34, павильон №1/1
@@ -90,7 +90,7 @@ class Footer extends Component {
                             <div className="footer__item  footer__item--full">
                                 <div className="yandex-market">
                                     <img src={yandex} alt="иконка Яндекс" className="yandex-market__icon"/>
-                                    <a href="" className="btn btn--small btn--transparent-gray btn--inline">
+                                    <a href="/#" className="btn btn--small btn--transparent-gray btn--inline">
                                         Оставить
                                     </a>
                                 </div>
@@ -102,7 +102,7 @@ class Footer extends Component {
                     <div className="container">
                         <ul className="socials">
                             <li className="socials__item">
-                                <a href="" className="socials__link">
+                                <a href="/#" className="socials__link">
                                     <img src={instagram} className="socials__icon" alt="иконка Instagram"/>
                                     <span className="socials__name">
                                         Instagram
@@ -110,7 +110,7 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li className="socials__item">
-                                <a href="" className="socials__link">
+                                <a href="/#" className="socials__link">
                                     <img src={facebook} className="socials__icon" alt="иконка Facebook"/>
                                     <span className="socials__name">
                                         Facebook
@@ -118,7 +118,7 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li className="socials__item">
-                                <a href="" className="socials__link">
+                                <a href="/#" className="socials__link">
                                     <img src={twitter} className="socials__icon" alt="иконка Twitter"/>
                                     <span className="socials__name">
                                         Twitter
@@ -126,7 +126,7 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li className="socials__item">
-                                <a href="" className="socials__link">
+                                <a href="/#" className="socials__link">
                                     <img src={vk} className="socials__icon" alt="иконка Вконтакте"/>
                                     <span className="socials__name">
                                         Вконтакте
@@ -137,7 +137,7 @@ class Footer extends Component {
 
                         <div className="yandex-market">
                             <img src={yandex} alt="иконка Яндекс" className="yandex-market__icon"/>
-                            <a href="" className="btn btn--small btn--transparent-gray btn--inline">
+                            <a href="/#" className="btn btn--small btn--transparent-gray btn--inline">
                                 Оставить
                             </a>
                         </div>
@@ -149,7 +149,7 @@ class Footer extends Component {
                         <span className="copyrite">
                             © 2010-2020 "Safestore". Все права защищены. Информация сайта защищена законом об авторских правах.
                         </span>
-                        <a href="" className="footer__personal-data">Политика обработки персональных данных</a>
+                        <a href="/#" className="footer__personal-data">Политика обработки персональных данных</a>
                     </div>
                 </div>
             </footer>

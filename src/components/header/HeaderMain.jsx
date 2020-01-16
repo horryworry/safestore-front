@@ -15,15 +15,15 @@ class HeaderMain extends Component {
                         <div className="header__phones">
                             <div className="header__item header__item--mobile">
                                 <a href="tel:+996700391252" className="header__phone">+996 (700) 39-12-52</a>
-                                <a href="" className="header__link">Заказать звонок</a>
+                                <a href="/#" className="header__link">Заказать звонок</a>
                             </div>
                             <div className="header__item">
                                 <a href="tel:+996700391252" className="header__phone">+996 (700) 39-12-52</a>
-                                <a href="" className="header__description">Звонок бесплатный</a>
+                                <a href="/#" className="header__description">Звонок бесплатный</a>
                             </div>
                         </div>
                         <div className="header__address header-address">
-                            <img src={address} className="header-address__icon"/>
+                            <img src={address} alt={""} className="header-address__icon"/>
                             <span className="header-address__text">ул. Советская дом 61, г.Бишкек, Киргизия</span>
                         </div>
                         <div className="header__shop">
@@ -36,7 +36,7 @@ class HeaderMain extends Component {
                         </span>
                             </div>
                             <div className="header-basket">
-                                <img src={basket} className="header-basket__icon"/>
+                                <img src={basket} alt={""} className="header-basket__icon"/>
                                 <span className="header-basket__text">
                             Корзина
                         </span>
