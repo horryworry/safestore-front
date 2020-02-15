@@ -20,6 +20,10 @@ import ProductTabs from "./product/ProductTabs/ProductTabs";
 import Tab1 from "./product/ProductTabs/Tabs/Tab1";
 import Tab2 from "./product/ProductTabs/Tabs/Tab2";
 import Tab3 from "./product/ProductTabs/Tabs/Tab3";
+import wallet from "../static/images/general/wallet.png";
+import truck from "../static/images/general/truck.png";
+import map from "../static/images/general/map.png";
+import apple from "../static/images/content/brands/appleBrand.png";
 
 class Product extends Component {
 
@@ -34,17 +38,30 @@ class Product extends Component {
     }
 
     componentDidMount() {
-        this.props.changeContainerWidth(this.containerRef.current.offsetWidth)
+        this.props.changeContainerWidth(this.containerRef.current.offsetWidth - 30)
         window.addEventListener('resize', this.changeWindowListener);
     }
 
     changeWindowListener = () => {
-        this.props.changeContainerWidth(this.containerRef.current.offsetWidth)
+        this.props.changeContainerWidth(this.containerRef.current.offsetWidth - 30)
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.changeWindowListener);
     }
+
+    getProductList = () => {
+        let table = []
+        let products = ['Наличные', 'Электронные деньги', 'Сбербанк', 'Безналичная оплата']
+        for (let i = 0; i < products.length; i++) {
+            table.push(
+                <li className="product-list__item" key={i}>
+                    {products[i]}
+                </li>
+            )
+        }
+        return table
+    };
 
     render() {
         return(
@@ -85,8 +102,55 @@ class Product extends Component {
                     <div className="container">
                         <div className="product">
                             <div className="product__header">
+                                <div className="product-info__header" style={{display: `${this.props.screenWidth < 1140 ? "" : "none"}`}}>
+                                    <h1 className="title-page">
+                                        iPhone XS
+                                    </h1>
+                                    <img src={apple} alt={"Логотип бренда"} className="product-info__logo"></img>
+                                </div>
                                 <ProductSlider/>
                                 <Info/>
+                                <div className="product-info__footer" style={{display: `${this.props.screenWidth < 1140 ? "" : "none"}`}}>
+                                    <div className="product-info-advantages">
+                                        <div className="product-info-advantage">
+                                            <div className="product-info-advantage__header">
+                                                <img src={wallet} alt="" className="product-info-advantage__icon"/>
+                                                <span className="product-info-advantage__title">
+                                                    Оплата
+                                                </span>
+                                            </div>
+                                            <div className="product-info-advantage__body">
+                                                <ul className="product-list product-list--advantage">
+                                                    {this.getProductList()}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="product-info-advantage">
+                                            <div className="product-info-advantage__header">
+                                                <img src={truck} alt="" className="product-info-advantage__icon"/>
+                                                <span className="product-info-advantage__title">
+                                                    Доставка
+                                                </span>
+                                            </div>
+                                            <div className="product-info-advantage__body">
+                                                <p className="product__text">По Бишкеку сегодня курьером - <b>бесплатно</b></p>
+                                                <p className="product__text">Самовывоз с нашего магазина - <b>бесплатно</b></p>
+                                            </div>
+                                        </div>
+                                        <div className="product-info-advantage">
+                                            <div className="product-info-advantage__header">
+                                                <img src={map} alt="" className="product-info-advantage__icon"/>
+                                                <span className="product-info-advantage__title">
+                                                    Самовывоз
+                                                </span>
+                                            </div>
+                                            <div className="product-info-advantage__body">
+                                                <p className="product__text">г.Бишкек, улица Советская, дом 61, павильон 1/2</p>
+                                                <a href="" className="product-info__link">Яндекс карты</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="product__body">
                                 <ProductTabs scrollToMyRef={this.scrollToMyRef} containerWidth={this.props.containerWidth}>
@@ -130,7 +194,8 @@ Product.propTypes = {
     characteristicsTabActive: PropTypes.bool.isRequired,
     reviewTabActive: PropTypes.bool.isRequired,
     deliveryTabActive: PropTypes.bool.isRequired,
-    containerWidth: PropTypes.number.isRequired
+    containerWidth: PropTypes.number.isRequired,
+    screenWidth: PropTypes.number.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -139,7 +204,8 @@ const mapStateToProps = state => ({
     characteristicsTabActive: state.productTab.characteristicsTabIsActive,
     reviewTabActive: state.productTab.reviewTabIsActive,
     deliveryTabActive: state.productTab.deliveryTabIsActive,
-    containerWidth: state.productTabNavigation.containerWidth
+    containerWidth: state.productTabNavigation.containerWidth,
+    screenWidth: state.mobileMenu.screenWidth
 });
 
 export default connect(mapStateToProps, { changeActiveProductColor, changeContainerWidth })(Product);

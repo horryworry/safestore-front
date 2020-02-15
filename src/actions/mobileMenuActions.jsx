@@ -24,6 +24,7 @@ export function hideModal() {
 }
 
 export function changeWindowSize() {
+    console.log(window.innerWidth)
     return async function (dispatch) {
         dispatch({
             type: CHANGE_WINDOW_SIZE,

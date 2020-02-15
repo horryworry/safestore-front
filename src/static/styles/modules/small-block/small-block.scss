@@ -170,16 +170,18 @@
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__item {
     align-items: center;
     display: flex;
     &:after {
       content: '';
-      display: inline-block;
       background-image: url("../../../images/general/breadcrumbarrow.svg");
-      margin: 0 10px;
+      display: inline-block;
       height: 11px;
+      line-height: 1.5;
+      margin: 0 10px;
       width: 16px;
     }
     &:last-child {

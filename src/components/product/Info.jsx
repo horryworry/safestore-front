@@ -5,6 +5,8 @@ import star from "../../static/images/general/star.png";
 import wallet from "../../static/images/general/wallet.png";
 import truck from "../../static/images/general/truck.png";
 import map from "../../static/images/general/map.png";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
 
 class Info extends Component {
 
@@ -44,11 +46,10 @@ class Info extends Component {
         return table
     };
 
-
     render() {
         return(
             <div className="product-info">
-                <div className="product-info__header">
+                <div className="product-info__header" style={{display: `${this.props.screenWidth >= 1140 ? "" : "none"}`}}>
                     <h1 className="title-page">
                         iPhone XS
                     </h1>
@@ -108,7 +109,7 @@ class Info extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="product-info__footer">
+                <div className="product-info__footer" style={{display: `${this.props.screenWidth >= 1140 ? "" : "none"}`}}>
                     <div className="product-info-advantages">
                         <div className="product-info-advantage">
                             <div className="product-info-advantage__header">
@@ -154,5 +155,12 @@ class Info extends Component {
     }
 
 }
+Info.propTypes = {
+    screenWidth: PropTypes.number.isRequired
+};
 
-export default Info;
+const mapStateToProps = state => ({
+    screenWidth: state.mobileMenu.screenWidth
+});
+
+export default connect(mapStateToProps, { })(Info);

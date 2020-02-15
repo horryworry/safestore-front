@@ -9,6 +9,9 @@
   }
   &__body {
     margin-right: -30px;
+    @media screen and (max-width: $tablet-size) {
+      margin-right: -15px;
+    }
   }
   &__navigation {
     display: flex;

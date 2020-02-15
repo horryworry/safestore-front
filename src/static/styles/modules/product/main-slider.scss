@@ -1,15 +1,13 @@
 .product {
-  &__header {
-    display: flex;
-    & > * {
-      flex: 0 0 calc(50% - 15px);
-    }
-  }
   &-slider {
     margin-right: 15px;
     padding-left: 100px;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: $phone-size) {
+      padding-left: 0;
+      margin-right: 0;
+    }
     &__img {
       height: auto;
       max-height: 100%;
@@ -26,6 +24,9 @@
     top: 0;
     width: 65px;
     max-height: 500px;
+    @media screen and (max-width: $phone-size) {
+      display: none;
+    }
     &__btn {
       width: 65px;
       height: 65px;
@@ -59,8 +60,5 @@
     .slick-list {
       max-height: 230px;
     }
-  }
-  &-info {
-    margin-left: 15px;
   }
 }
