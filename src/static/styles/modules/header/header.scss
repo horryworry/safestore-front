@@ -15,7 +15,7 @@
   &__top {
     background-color: $gray-background;
     padding: 10px 0;
-    @media screen and (max-width: $tablet-size){
+    @media screen and (max-width: $phone-size){
       display: none;
     }
   }

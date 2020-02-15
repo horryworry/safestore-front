@@ -14,6 +14,9 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  &.fixed {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -73,7 +76,10 @@ textarea { vertical-align: middle; }
 
 textarea { resize: none; }
 
-section { position: relative; }
+section {
+  padding: 35px 0;
+  position: relative;
+}
 
 input,
 select,
@@ -83,6 +89,12 @@ button { outline: none; }
   display: flex;
   flex-direction: column;
   height: 100%;
+  left: 0;
+  position: relative;
+  transition: all linear .5s;
+  &.mobile-menu-open {
+    left: 100%;
+  }
 }
 
 .content { flex: 1 0 auto; }

@@ -6,36 +6,23 @@ import logo from "../../static/images/general/logoo.png";
 import basket from "../../static/images/general/shopping-basket.png";
 import user from "../../static/images/general/user.png";
 import search from "../../static/images/general/search.png";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
+
+import {showModal} from "../../actions/mobileMenuActions";
+import {hideModal} from "../../actions/mobileMenuActions";
+import {changeWindowSize} from "../../actions/mobileMenuActions";
 
 class HeaderMobile extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: 0,
-            height: 0,
-            isMenuVisible: false
-        };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
-
     componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
+        this.props.changeWindowSize();
+        window.addEventListener('resize', this.props.changeWindowSize);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
+        window.removeEventListener('resize', this.props.changeWindowSize);
     }
-
-    updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
-    }
-
-    toggleMenu = () => {
-        this.setState(prevState => ({ isMenuVisible: !prevState.isMenuVisible }));
-        // this.state = { isMenuVisible: !this.state.isMenuVisible }
-    };
 
     mainSubnavLink = (link, text) => {
         return(
@@ -60,15 +47,43 @@ class HeaderMobile extends Component {
         );
     };
 
+    showMenu = () => {
+        this.props.showModal();
+        if (this.props.screenWidth < 768) {
+            document.body.classList.add('fixed');
+        }
+    };
+
+    hideMenu = () => {
+        this.props.hideModal();
+        if (this.props.screenWidth < 768) {
+            document.body.classList.remove('fixed');
+        }
+    };
+
+    checkWhatPageItIs = () => {
+        if (window.location.pathname == "/index.html") {
+            return (
+                <div className="mobile__logo logo">
+                    <img src={logo} alt="Логотип" className="logo__img"/>
+                </div>
+            );
+        } else {
+            return (
+                <a href="index.html" className="mobile__logo logo">
+                    <img src={logo} alt="Логотип" className="logo__img"/>
+                </a>
+            );
+        }
+    };
+
     render() {
-
-        const { isMenuVisible } = this.state;
-
         return(
             <div className="header__mobile">
                 <div className="container">
-                    <div className={`mobile-menu ${isMenuVisible ? "mobile-menu--open" : ""}`}>
-                        <div className="mobile-menu__toggle" onClick={this.toggleMenu}>
+                    {/*<div className={`mobile-menu ${isMenuVisible ? "mobile-menu--open" : ""}`}>*/}
+                    <div className={`mobile-menu ${this.props.mobileModalMenu ? "mobile-menu--open" : ""}`}>
+                        <div className="mobile-menu__toggle" onClick={this.showMenu}>
                             <div className="mobile-menu__sandwich sandwich">
                                 <div className="sandwich__line sandwich__line--top">
 
@@ -89,24 +104,24 @@ class HeaderMobile extends Component {
                                 <span className="mobile-menu__title">
                                     Меню
                                 </span>
-                                <div className="mobile-menu__close" onClick={this.toggleMenu}>
+                                <div className="mobile-menu__close" onClick={this.hideMenu}>
                                     <img src={closeButton} alt="" className="mobile-menu__close-icon"/>
                                 </div>
                             </div>
                             <div className="mobile-menu__body">
                                 <nav className="catalog-nav">
                                     <ul className="catalog-nav__list">
-                                        {this.mainSubnavLink('', 'iPhone')}
-                                        {this.mainSubnavLink('', 'Macbook')}
-                                        {this.mainSubnavLink('', 'Macbook Mini')}
-                                        {this.mainSubnavLink('', 'Apple Watch')}
-                                        {this.mainSubnavLink('', 'iPad')}
-                                        {this.mainSubnavLink('', 'Apple TV')}
+                                        {this.mainSubnavLink('category-page.html', 'iPhone')}
+                                        {this.mainSubnavLink('category-page.html', 'Macbook')}
+                                        {this.mainSubnavLink('category-page.html', 'Macbook Mini')}
+                                        {this.mainSubnavLink('category-page.html', 'Apple Watch')}
+                                        {this.mainSubnavLink('category-page.html', 'iPad')}
+                                        {this.mainSubnavLink('category-page.html', 'Apple TV')}
                                     </ul>
                                 </nav>
                                 <nav className="inform-nav inform-nav--col">
                                     <ul className="inform-nav__list">
-                                        {this.informNavLink('', 'О компании')}
+                                        {this.informNavLink('static-page.html', 'О компании')}
                                         {this.informNavLink('', 'Доставка и оплата')}
                                         {this.informNavLink('', 'Акции')}
                                         {this.informNavLink('', 'Оптовикам')}
@@ -136,9 +151,7 @@ class HeaderMobile extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="mobile__logo logo">
-                        <img src={logo} alt="Логотип" className="logo__img"/>
-                    </div>
+                    {this.checkWhatPageItIs()}
                     <div className="search">
                         <form className="search__form">
                             <div className="search__input-wrapper">
@@ -176,4 +189,16 @@ class HeaderMobile extends Component {
     }
 }
 
-export default HeaderMobile;
+HeaderMobile.propTypes = {
+    mobileModalMenu: PropTypes.bool.isRequired,
+    screenWidth: PropTypes.number.isRequired,
+    screenHeight: PropTypes.number.isRequired
+};
+
+const mapStateToProps = state => ({
+    mobileModalMenu: state.mobileMenu.mobileModalMenu,
+    screenWidth: state.mobileMenu.screenWidth,
+    screenHeight: state.mobileMenu.screenHeight
+});
+
+export default connect(mapStateToProps, { showModal, hideModal, changeWindowSize })(HeaderMobile);

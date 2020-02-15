@@ -3,14 +3,14 @@ import sale1 from "../../static/images/content/news/sale1.jpg";
 import sale2 from "../../static/images/content/news/safe2.png";
 import apple from "../../static/images/content/brands/appleBrand.png";
 
-class Banner extends Component {
+class Information extends Component {
 
     returnMultipleItems = () => {
         let table = [];
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 6; i++) {
             table.push(
                 <li className="brands__item" key={i}>
-                    <a href="/#" className="brand">
+                    <a href="brand.html" className="brand">
                         <img src={apple} alt={""} className="brand__img"></img>
                         <span className="brand__name">
                             Apple
@@ -111,14 +111,18 @@ class Banner extends Component {
 
                             <div className="information-item__body">
                                 <div className="brands__wrapper">
-                                    <ul className="brands__list brands__list--small">
-                                        {this.returnMultipleItems()}
-                                    </ul>
+                                    <div className="mobile-scroll-wrapper">
+                                        <div className="mobile-scroll-inner">
+                                            <ul className="brands__list-small">
+                                                {this.returnMultipleItems()}
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="information-item__footer">
-                                <a href="/#" className="information-item__link">
+                                <a href="brands.html" className="information-item__link">
                                     Все бренды
                                 </a>
                                 <span className="information-item__count">
@@ -135,4 +139,4 @@ class Banner extends Component {
     }
 }
 
-export default Banner;
+export default Information;

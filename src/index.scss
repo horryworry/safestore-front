@@ -46,3 +46,9 @@ code {
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: local('OpenSans-Italic'), url("./fonts/OpenSans-Italic.ttf") format('truetype');
+  font-style: normal;
+}

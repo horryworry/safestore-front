@@ -50,22 +50,26 @@ class AboutTabs extends Component {
 
                         </div>
 
-                        <ul className="tabs-navigation about-navigation">
+                        <div className="mobile-scroll-wrapper">
+                            <div className="mobile-scroll-inner">
+                                <ul className="tabs-navigation about-navigation">
 
-                            {children.map((child) => {
-                                const { label } = child.props;
+                                    {children.map((child) => {
+                                        const { label } = child.props;
 
-                                return (
-                                    <AboutTab
-                                        activeTab={activeTab}
-                                        key={label}
-                                        label={label}
-                                        onClick={onClickTabItem}
-                                    />
-                                );
-                            })}
+                                        return (
+                                            <AboutTab
+                                                activeTab={activeTab}
+                                                key={label}
+                                                label={label}
+                                                onClick={onClickTabItem}
+                                            />
+                                        );
+                                    })}
 
-                        </ul>
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

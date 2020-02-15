@@ -9,6 +9,7 @@ import './fonts/OpenSans-Light.ttf'
 import './fonts/OpenSans-SemiBold.ttf'
 import './fonts/OpenSans-Regular.ttf'
 import './fonts/VAG-Rounded-Bold.ttf'
+import './fonts/OpenSans-Italic.ttf'
 
 ReactDOM.render(
             <App />, document.getElementById('root')

@@ -1,8 +1,27 @@
 .title {
+  &-page {
+    color: $navigation-text;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 30px;
+  }
   &-section {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.67;
+    margin-bottom: 20px;
+  }
+  &-block {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &-small {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.21;
     margin-bottom: 25px;
   }
 }

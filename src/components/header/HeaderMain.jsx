@@ -4,14 +4,30 @@ import address from "../../static/images/general/address.png";
 import basket from "../../static/images/general/shopping-basket.png";
 
 class HeaderMain extends Component {
+
+    checkWhatPageItIs = () => {
+        if (window.location.pathname == "/index.html") {
+            return(
+                <div className="header__logo logo">
+                    <img src={logo} alt="Логотип" className="logo__img"/>
+                </div>
+            );
+        } else {
+            return(
+                <a href="index.html" className="header__logo logo">
+                    <img src={logo} alt="Логотип" className="logo__img"/>
+                </a>
+            );
+        }
+    };
+
     render() {
         return(
             <div className="header__main">
                 <div className="container">
                     <div className="header__content">
-                        <div className="header__logo logo">
-                            <img src={logo} alt="Логотип" className="logo__img"/>
-                        </div>
+                        {this.checkWhatPageItIs()}
+
                         <div className="header__phones">
                             <div className="header__item header__item--mobile">
                                 <a href="tel:+996700391252" className="header__phone">+996 (700) 39-12-52</a>

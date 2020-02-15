@@ -1,0 +1,71 @@
+.category-slider {
+  background-color: $gray-background;
+  border-radius: 4px;
+  padding: 0 0 20px;
+  position: relative;
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+  }
+  &__title {
+    background-color: rgba(52, 59, 76, 0.5);
+    border-radius: 0 0 4px 4px;
+    color: $white;
+    font-family: 'VAG';
+    font-size: 19px;
+    line-height: 1.58;
+    padding: 10px 20px;
+    text-align: center;
+    @media screen and (max-width: $phone-size) {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+  }
+  &__item {
+    font-size: 12px;
+    margin: 0 10px;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+    @media screen and (max-width: $phone-size) {
+      padding: 0;
+    }
+  }
+  &__icon {
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .slick-dots {
+    bottom: -50px;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    display: none;
+    @media screen and (max-width: $tablet-size) {
+      display: flex;
+    }
+    & > * {
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+    li {
+      &.slick-active {
+        .category-slider__dot {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: $alto;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

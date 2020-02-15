@@ -1,7 +1,6 @@
 @import "hits";
 
 .tab {
-  //display: block;
   display: none;
   &.tab {
     display: block;
@@ -13,6 +12,7 @@
   &-navigation {
     &__item {
       cursor: pointer;
+      white-space: nowrap;
     }
   }
 }

@@ -86,9 +86,6 @@ footer { flex: 0 0 auto; }
     font-family: OpenSans-SemiBold;
     background-color: rgba(0, 0, 0, 0.05);
     padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     .container {
       display: flex;
       justify-content: space-between;
@@ -103,8 +100,10 @@ footer { flex: 0 0 auto; }
         text-align: center;
       }
       & > * {
-        flex: 0 0 45%;
-        width: 45%;
+        @media screen and (max-width: $tablet-size){
+          flex: 0 0 45%;
+          width: 45%;
+        }
         @media screen and (max-width: $phone-size) {
           flex: 1;
           width: 100%;
@@ -114,8 +113,9 @@ footer { flex: 0 0 auto; }
   }
   &__personal-data {
     color: $gray-text;
+    text-align: right;
     @media screen and (max-width: $phone-size) {
-      margin-right: 10px;
+      margin-top: 10px;
     }
   }
   &__socials {

@@ -5,6 +5,7 @@ import right from "../../static/images/general/arrowright.png";
 import iphone from "../../static/images/content/banner/iphone.jpeg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import apple from "../../static/images/content/brands/appleBrand.png";
 
 class Banner extends Component {
 
@@ -21,6 +22,31 @@ class Banner extends Component {
     previous() {
         this.slider.slickPrev();
     }
+
+    showBanners = () => {
+        let banners = [];
+        for (let i = 0; i < 4; i++) {
+            banners.push(
+                <div className="banner__item">
+                    <div className="banner__content">
+                        <div className="banner__img-wrapper">
+                            <img src={iphone} alt="Картинка на баннере" className="banner__img"></img>
+                        </div>
+                        <div className="banner__body">
+                                    <span className="banner__title">
+                                        iPhone
+                                    </span>
+                            <span className="banner__descr">
+                                        Подарок который оценит каждый
+                                    </span>
+                            <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        return banners;
+    };
 
     render() {
         const settings = {
@@ -47,72 +73,7 @@ class Banner extends Component {
                             <img src={right} alt={""} className="banner__navigation-icon"/>
                         </div>
                         <Slider ref={c => (this.slider = c)} {...settings} class="js-banner">
-
-                            <div className="banner__item">
-                                <div className="banner__content">
-                                    <div className="banner__img-wrapper">
-                                        <img src={iphone} alt="Картинка на баннере" className="banner__img"></img>
-                                    </div>
-                                    <div className="banner__body">
-                                    <span className="banner__title">
-                                        iPhone
-                                    </span>
-                                        <span className="banner__descr">
-                                        Подарок который оценит каждый
-                                    </span>
-                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="banner__item">
-                                <div className="banner__content">
-                                    <div className="banner__img-wrapper">
-                                        <img src={iphone} alt="Картинка на баннере" className="banner__img"></img>
-                                    </div>
-                                    <div className="banner__body">
-                                    <span className="banner__title">
-                                        iPhone
-                                    </span>
-                                        <span className="banner__descr">
-                                        Подарок который оценит каждый
-                                    </span>
-                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="banner__item">
-                                <div className="banner__content">
-                                    <div className="banner__img-wrapper">
-                                        <img src={iphone} alt="Картинка на баннере" className="banner__img"></img>
-                                    </div>
-                                    <div className="banner__body">
-                                    <span className="banner__title">
-                                        iPhone
-                                    </span>
-                                        <span className="banner__descr">
-                                        Подарок который оценит каждый
-                                    </span>
-                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="banner__item">
-                                <div className="banner__content">
-                                    <div className="banner__img-wrapper">
-                                        <img src={iphone} alt="Картинка на баннере" className="banner__img"></img>
-                                    </div>
-                                    <div className="banner__body">
-                                    <span className="banner__title">
-                                        iPhone
-                                    </span>
-                                        <span className="banner__descr">
-                                        Подарок который оценит каждый
-                                    </span>
-                                        <a href="/#" className="btn btn--transparent-white btn--round btn--inline">Выбрать</a>
-                                    </div>
-                                </div>
-                            </div>
-
+                            {this.showBanners()}
                         </Slider>
                     </div>
                 </div>

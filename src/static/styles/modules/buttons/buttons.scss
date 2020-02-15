@@ -1,6 +1,6 @@
 .btn {
   background-color: $white;
-  border: 1px solid $orange;
+  border: 2px solid $orange;
   border-radius: 2px;
   line-height: 38px;
   font-family: OpenSans-SemiBold;
@@ -10,6 +10,7 @@
   padding: 0 20px;
   text-align: center;
   transition: all linear .3s;
+  white-space: nowrap;
   cursor: pointer;
   display: block;
   width: 100%;
@@ -38,6 +39,23 @@
         }
       }
     }
+    &--bg {
+      &-orange {
+        color: $white;
+        background-color: $orange;
+      }
+    }
+    &--contour {
+      &-gray {
+        border: 2px solid $alto;
+        color: $navigation-text;
+        line-height: 36px;
+        &:hover {
+          color: $white;
+          background-color: $alto;
+        }
+      }
+    }
     &--round {
       border-radius: 20px;
     }
@@ -45,11 +63,14 @@
       display: inline-block;
       width: auto;
     }
-  }
-
-  &--small {
-    height: 30px;
-    line-height: 28px;
-    padding: 0 15px;
+    &--small {
+      line-height: 28px;
+      height: 30px;
+      padding: 0 15px;
+    }
+    &--big {
+      line-height: 48px;
+      height: 50px;
+    }
   }
 }

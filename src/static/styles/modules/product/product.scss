@@ -1,2 +1,187 @@
 @import "prev";
 @import "line-slider";
+@import "border-line-slider";
+@import "main-slider";
+@import "details";
+@import "review";
+
+.product {
+  color: $navigation-text;
+  &__text {
+    font-size: 13px;
+  }
+  &-info {
+    &__header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .title-page {
+        margin-bottom: 0;
+      }
+    }
+    &__body {
+      margin-bottom: 50px;
+      & > * {
+        margin: 30px 0;
+        &:first-child { margin-top: 0; }
+        &:last-child { margin-bottom: 0; }
+      }
+    }
+    &__logo {
+      height: 50px;
+    }
+    &__row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__link {
+      color: $navigation-text;
+      display: inline-block;
+      font-size: 13px;
+      border-bottom: 1px dotted $alto;
+    }
+    &-advantages {
+      display: flex;
+      & > * {
+        flex: 1;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-advantage {
+      &__header {
+        align-items: center;
+        display: flex;
+        margin-bottom: 15px;
+        & > * {
+            margin-right: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+        }
+      }
+      &__icon {
+        width: 35px;
+        height: 35px;
+        fill: $navigation-text;
+      }
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+  &-rating {
+    align-items: center;
+    display: flex;
+    & > * {
+        margin-right: 10px;
+        &:last-child { margin-right: 0; }
+    }
+    &__stars {
+      align-items: center;
+      display: flex;
+      & > * {
+        margin-right: 5px;
+        &:last-child { margin-right: 0; }
+      }
+    }
+    &__icon {
+      height: 15px;
+      width: 15px;
+      fill: $alto;
+      &.product-rating__icon--active {
+        fill: $orange;
+      }
+    }
+  }
+  &-color {
+    align-items: center;
+    display: flex;
+    & > * {
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+  &-available {
+    align-items: center;
+    display: flex;
+    & > * {
+        margin-right: 10px;
+        &:last-child { margin-right: 0; }
+    }
+    &-view {
+      align-items: center;
+      display: flex;
+      overflow: hidden;
+      border-radius: 2px;
+      & > * {
+          margin-right: 2px;
+          &:last-child { margin-right: 0; }
+      }
+      &__item {
+        background-color: $vida-loca;
+        height: 16px;
+        width: 8px;
+      }
+    }
+  }
+  &-price {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    &__old {
+      color: $gray-text;
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-decoration: line-through;
+    }
+    &__current {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+  &-actions {
+    align-items: center;
+    display: flex;
+    & > * {
+        margin-right: 20px;
+        &:last-child { margin-right: 0; }
+    }
+  }
+  &-list {
+    &.product-list--advantage {
+      .product-list {
+        &__item {
+          padding-left: 15px;
+          &:before {
+            background-color: $orange;
+            left: 0;
+          }
+        }
+      }
+    }
+    &__item {
+      font-size: 13px;
+      line-height: 1.54;
+      padding-left: 50px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $mine-shaft;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 8px;
+      }
+    }
+  }
+}
